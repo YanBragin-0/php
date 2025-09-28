@@ -7,5 +7,7 @@
 </head>
 <body>
     <h1>сторінка Реєстрації</h1>
+    <input value="Name">
+    <input value="Passwoed">
 </body>
 </html>

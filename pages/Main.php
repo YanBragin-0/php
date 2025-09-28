@@ -7,7 +7,7 @@
 </head>
 <body>
    
-    <?php include_once 'nav.php'?>
+    
      <h1>Головна сторінка</h1>
 </body>
 </html>
