@@ -6,8 +6,6 @@
     <title><?=$title?></title>
 </head>
 <body>
-   
-    
      <h1>Головна сторінка</h1>
 </body>
 </html>

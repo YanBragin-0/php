@@ -1,16 +1,15 @@
 <?php
-    $router =[
-        "/Main"=> ["title"=>"Головна сторінка","file"=>"Main.php"],
-        "/register"=>["title"=>"Реєстрація","file"=>"register.php"]
-    ];
-    $url = $_SERVER["REQUEST_URI"];
+    if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['blabla']) ){
+        $filename = $_FILES['file'];
+        var_dump($filename);
 
-    if(isset($router[$url])){
-        $title = $router[$url]["title"];
-        include "pages/". $router[$url]["file"];
+        $target_dir = "./upload/";
+        $target_file = $target_dir . basename($_FILES["file"]["name"]);
+        if(file_exists($target_file)){
+            echo "Вибачте файл вже існує";
+        }else
+            move_uploaded_file($_FILES["file"]["tmp_name"],$target_file);
     }
-    else{
-        $title = "Not Found";
-        include "pages/404.php";
-    }
+
+    include "./index.html";
 ?>
